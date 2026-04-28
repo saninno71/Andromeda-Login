@@ -1,0 +1,237 @@
+
+.login-page {
+  position: relative;
+  min-height: 100vh;
+
+background: linear-gradient(
+  150deg,
+  #297AC9 0%,
+  #602987 30%,
+  #3F165F 100%  
+);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: url("./res/fondo-estrellas.png");
+  /* background-size: cover; */
+  background-size: 90%;
+  background-position: center;
+
+  opacity: 0.8;
+  pointer-events: none;
+}
+
+
+
+.login-page .login-card {
+  display: flex;
+  z-index: 1;
+  width: 90%;
+  max-width: 851px;
+
+  aspect-ratio: 851 / 425;
+
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+
+.login-page .login-right {
+  flex: 1;
+  background: linear-gradient(135deg, #1aa3d8, #0077b6);
+  position: relative; /* 👈 clave */
+}
+
+.login-page .login-left {
+  flex: 0 0 500px;
+  background: #f2f2f2;
+  position: relative;
+}
+
+.logo {
+  position: absolute;
+
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 50%;       /* 👈 relativo al contenedor */
+  max-width: 248px; /* 👈 no se agranda de más */
+  height: auto;
+}
+
+.login-content {
+  margin-top: 131px; /* 👈 espacio debajo del logo */
+  padding: 0 35px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.login-form input {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #00AEEF;  /* 👈 color celeste */
+  border-radius: 4px;         /* opcional, pero en tu imagen parece que tiene */
+  padding: 10px;              /* mejora visual */
+}
+
+.input-user {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;   /* Medium */
+  font-size: 12px;
+  color: #5E5E5E;
+}
+
+
+.login-form input:focus {
+  outline: none;                     /* saca el borde feo default */
+  border: 1px solid #00AEEF;         /* mantiene tu color */
+  box-shadow: 0 0 0 2px rgba(0,174,239,0.2); /* glow suave opcional */
+}
+
+.login-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.welcome {
+  font-family: 'Inter', sans-serif;
+  font-size: 23px;
+  font-weight: 800; /* 👈 Extra Bold */
+  color: #662D91;  /* 👈 acá */
+}
+
+.input-password::placeholder {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 13px;
+  color: #00AEEF;
+}
+
+/* contenedor */
+.input-group.floating {
+  position: relative;
+  width: 100%;
+}
+
+/* input */
+.input-group.floating input {
+  width: 100%;
+  box-sizing: border-box;
+
+  padding: 18px 10px 6px 10px; /* espacio arriba para el label */
+  
+  border: 1px solid #00AEEF;
+  border-radius: 4px;
+
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  color: #5E5E5E;
+}
+
+/* label (texto "Usuario") */
+.input-group.floating label {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 10px;
+  color: #00AEEF;
+
+  pointer-events: none;
+  transition: 0.2s ease;
+}
+
+/* cuando está activo o tiene texto */
+.input-group.floating input:focus + label,
+.input-group.floating input:not(:placeholder-shown) + label {
+  top: 6px;
+  transform: none;
+}
+
+.forgot {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;   /* Medium */
+  font-size: 12px;
+  color: #00AEEF;
+
+  text-decoration: none; /* opcional, saca el subrayado */
+}
+
+.forgot:hover {
+  text-decoration: underline;
+}
+
+.btn-login {
+  background-color: #00AEEF;  /* fondo celeste */
+  color: #FFFFFF;             /* texto blanco */
+
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;           /* Semi Bold */
+  font-size: 13px;
+
+  border: none;
+  border-radius: 4px;         /* opcional según tu diseño */
+  padding: 10px 16px;
+
+  cursor: pointer;
+}
+
+.btn-login:hover {
+  filter: brightness(0.95);
+}
+
+.right-phrase {
+  width: 295px;
+  height: 131px;
+
+  font-family: 'Inter', sans-serif;
+  font-size: 35px;
+  font-weight: 600;
+  font-style: italic;
+  color: #FFFFFF;
+
+  line-height: 1.2;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  position: absolute; /* 👈 */
+  top: 150px;          /* 👈 distancia exacta */
+  left: 50%;
+  transform: translateX(-50%); /* 👈 centrado horizontal */
+}
+
+.right-author {
+  position: absolute;
+
+  bottom: 20px;   /* 👈 ajustá según Figma */
+  right: 20px;    /* 👈 margen derecho */
+
+  font-family: 'Inter', sans-serif;
+  font-size: 19px;
+  color: #FFFFFF;
+  font-weight: 300;   /* 👈 Light */
+  font-style: italic; /* 👈 Italic */
+  text-align: right;
+}

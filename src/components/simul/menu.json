@@ -1,0 +1,48 @@
+[
+  {
+    "id": 1,
+    "label": "Dashboard",
+    "icon": "dashboard",
+    "route": "sub1"
+  },
+  {
+    "id": 2,
+    "label": "Usuarios",
+    "icon": "users",
+    "children": [
+      {
+        "id": 21,
+        "label": "Lista de usuarios",
+        "route": "usuarios_lista"
+      },
+      {
+        "id": 22,
+        "label": "Crear usuario",
+        "route": "usuarios_crear"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "label": "Reportes",
+    "icon": "reports",
+    "children": [
+      {
+        "id": 31,
+        "label": "Ventas",
+        "route": "reportes_ventas"
+      },
+      {
+        "id": 32,
+        "label": "Estadísticas",
+        "route": "reportes_stats"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "label": "Monitoreo",
+    "icon": "monitor",
+    "action": "toggleMonitor"
+  }
+]

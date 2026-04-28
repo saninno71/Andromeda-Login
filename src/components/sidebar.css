@@ -1,0 +1,79 @@
+/* LAYOUT */
+.main {
+  display: flex;
+  flex: 1;
+}
+
+/* SIDEBAR */
+.sidebar {
+  position: fixed; 
+  top: 60px;
+  left: 0;
+  width: 40px;
+  height: calc(100vh - 60px);
+  background: purple;
+  overflow: hidden;
+  transition: width 0.2s ease;
+  z-index: 1000;
+}
+
+.sidebar:hover {
+  width: 180px;
+}
+
+/* MENU ITEM */
+.menu-item {
+  display: flex;
+  flex-direction: column;
+  padding: 2px 0; /* 👈 compacto */
+}
+
+/* CONTENEDOR PRINCIPAL */
+.menu-main {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: flex-start;
+  height: 32px; /* 👈 más chico */
+  line-height: 1;
+}
+
+/* ICONO */
+.icon {
+  width: 40px;
+  min-width: 40px;
+  height: 32px; /* 👈 acompaña */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1;
+  transform: translateY(-1px);
+}
+
+/* LABEL */
+.label {
+  display: none;
+  white-space: nowrap;
+}
+
+.sidebar:hover .label {
+  display: block;
+}
+
+/* SUBMENU */
+.sub-menu-item {
+  display: flex;
+  flex-direction: column;
+  padding-left: 48px;
+  margin-top: 0; /* 👈 sin separación extra */
+}
+
+/* SUB ITEMS */
+.sm-label {
+  padding: 1px 0; /* 👈 bien compacto */
+  font-size: 14px;
+  color: #ccc;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
