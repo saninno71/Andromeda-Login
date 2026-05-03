@@ -1,8 +1,7 @@
 
 .login-page {
   position: relative;
-  /* min-height: 100vh; */
-  min-height: 100dvh;
+  min-height: 100vh;
 
 background: linear-gradient(
   150deg,
@@ -12,7 +11,6 @@ background: linear-gradient(
 );
 
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
 }
@@ -23,16 +21,15 @@ background: linear-gradient(
   inset: 0;
 
   background: url("./res/fondo-estrellas.png");
-  
-  /* background-size: 90%; */
-  background-size: cover;
-  background-repeat: no-repeat;
-
+  /* background-size: cover; */
+  background-size: 90%;
   background-position: center;
 
   opacity: 0.8;
   pointer-events: none;
 }
+
+
 
 .login-page .login-card {
   display: flex;
@@ -47,11 +44,6 @@ background: linear-gradient(
   box-shadow: 0 10px 30px rgba(0,0,0,0.3);
 }
 
-.login-page .login-left {
-  flex: 0 0 500px;
-  background: #f2f2f2;
-  position: relative;
-}
 
 .login-page .login-right {
   flex: 1;
@@ -59,39 +51,11 @@ background: linear-gradient(
   position: relative; /* 👈 clave */
 }
 
-
-/* --- MOBILE FIX --- */
-@media (max-width: 900px) {
-  .login-page .login-card {
-    flex-direction: column;
-    aspect-ratio: auto;
-    /* aspect-ratio: 1.1 / 1.5; */
-    /* height: auto; */
-
-    /* padding: 14px;
-    min-height: 400px; */
-  }
-
-  /* .login-content {
-    margin-top: 0px;
-  } */
-
-  .login-page .login-left {
-    flex: 0 0 450px;
-  }
-
-  .login-page .login-right {
-    display: none;
-  }
-
-  /* .login-card { outline: 2px solid red; }
-  .login-left { outline: 2px solid blue; }
-  .login-content { outline: 2px solid green; }
-  .login-form { outline: 2px solid yellow; } */
-  
+.login-page .login-left {
+  flex: 0 0 500px;
+  background: #f2f2f2;
+  position: relative;
 }
-
-
 
 .logo {
   position: absolute;
@@ -252,35 +216,22 @@ background: linear-gradient(
   justify-content: center;
   text-align: center;
 
-  position: absolute; 
-  top: 150px;          
+  position: absolute; /* 👈 */
+  top: 150px;          /* 👈 distancia exacta */
   left: 50%;
-  transform: translateX(-50%); 
+  transform: translateX(-50%); /* 👈 centrado horizontal */
 }
 
 .right-author {
   position: absolute;
 
-  bottom: 20px;   
-  right: 20px;    
+  bottom: 20px;   /* 👈 ajustá según Figma */
+  right: 20px;    /* 👈 margen derecho */
 
   font-family: 'Inter', sans-serif;
   font-size: 19px;
   color: #FFFFFF;
-  font-weight: 300;   
-  font-style: italic; 
+  font-weight: 300;   /* 👈 Light */
+  font-style: italic; /* 👈 Italic */
   text-align: right;
-}
-
-@media (max-height: 400px) {
-    .login-card {
-    zoom: 0.7;
-  }
-
-  /* .login-card { outline: 2px solid red; }
-  .login-left { outline: 2px solid blue; }
-  .login-content { outline: 2px solid green; }
-  .login-form { outline: 2px solid yellow; } */
-
-
 }
