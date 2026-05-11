@@ -18,13 +18,9 @@ function PantallaPrincipal() {
     <div className="PantallaPrincipal">
       <Header className="header" />
       <div className="main">
-        <Sidebar className="sidebar" sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} setPantalla={setPantalla} setMonitorView={setMonitorView} />
-        <Content className="content" pantalla={pantalla} addMsgMonitor={addMsgMonitor} /> 
+        <Sidebar className="sidebar" sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen}  />
+        <Content className="content"/> 
       </div>
-
-      {/* <div className="monitor" style={{visibility:monitorView}}>
-      {msgMonitor} {msgMonitor}
-      </div> */}
     
     </div>
   );

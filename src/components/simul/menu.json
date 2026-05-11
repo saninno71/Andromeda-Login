@@ -1,48 +1,131 @@
 [
   {
     "id": 1,
-    "label": "Dashboard",
-    "icon": "dashboard",
-    "route": "sub1"
+    "label": "Comisiones",
+    "icon": "Comisiones",
+    "route": "comisiones"
   },
   {
     "id": 2,
-    "label": "Usuarios",
-    "icon": "users",
-    "children": [
-      {
-        "id": 21,
-        "label": "Lista de usuarios",
-        "route": "usuarios_lista"
-      },
-      {
-        "id": 22,
-        "label": "Crear usuario",
-        "route": "usuarios_crear"
-      }
-    ]
+    "label": "Compras",
+    "icon": "Compras",
+    "route": "compras"
   },
   {
     "id": 3,
-    "label": "Reportes",
-    "icon": "reports",
+    "label": "Contabilidad",
+    "icon": "Contabilidad",
+    "route": "contabilidad",
     "children": [
       {
         "id": 31,
-        "label": "Ventas",
-        "route": "reportes_ventas"
+        "label": "Asientos",
+        "route": "asientos"
       },
       {
         "id": 32,
-        "label": "Estadísticas",
-        "route": "reportes_stats"
+        "label": "A X I Cuentas",
+        "route": "axi_cuentas"
+      },
+      {
+        "id": 33,
+        "label": "A X I Bienes de cambio",
+        "route": "axi_bienes_de_cambio"
+      },
+      {
+        "id": 34,
+        "label": "Balances contables",
+        "route": "balances_contables"
+      },
+      {
+        "id": 35,
+        "label": "Consolidación contable",
+        "route": "consolidacion_contable"
+      },
+      {
+        "id": 36,
+        "label": "Plan de cuentas",
+        "route": "plan_de_cuentas"
+      },
+      {
+        "id": 37,
+        "label": "Grupos contables",
+        "route": "grupos_contables"
+      },
+      {
+        "id": 38,
+        "label": "Índices contables",
+        "route": "indices_contables"
+      },
+      {
+        "id": 39,
+        "label": "Mayores contables",
+        "route": "mayores_contables"
+      },
+      {
+        "id": 310,
+        "label": "Modelo de asientos",
+        "route": "modelo_de_asientos"
+      },
+      {
+        "id": 311,
+        "label": "Resúmenes impositivos",
+        "route": "resumenes_impositivos"
       }
     ]
   },
   {
     "id": 4,
-    "label": "Monitoreo",
-    "icon": "monitor",
-    "action": "toggleMonitor"
+    "label": "Costos",
+    "icon": "Costos",
+    "route": "costos"
+  },
+  {
+    "id": 5,
+    "label": "Fondos",
+    "icon": "Fondos",
+    "route": "fondos"
+  },
+  {
+    "id": 6,
+    "label": "General",
+    "icon": "General",
+    "route": "general"
+  },
+  {
+    "id": 7,
+    "label": "Mensajes",
+    "icon": "Mensajes",
+    "route": "mensajes"
+  },
+  {
+    "id": 8,
+    "label": "Producción",
+    "icon": "Producción",
+    "route": "produccion"
+  },
+  {
+    "id": 9,
+    "label": "Seguridad",
+    "icon": "Seguridad",
+    "route": "seguridad"
+  },
+  {
+    "id": 10,
+    "label": "Stock",
+    "icon": "Stock",
+    "route": "stock"
+  },
+  {
+    "id": 11,
+    "label": "Sueldos y Jornales",
+    "icon": "Sueldos",
+    "route": "sueldos_y_jornales"
+  },
+  {
+    "id": 12,
+    "label": "Ventas",
+    "icon": "Ventas",
+    "route": "ventas"
   }
 ]

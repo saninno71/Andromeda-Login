@@ -1,0 +1,196 @@
+.menu-item {
+  display: flex;
+  flex-direction: column; /* 🔥 clave */
+  padding: 4px;
+}
+
+.menu-main {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: 4px;
+  min-height: 25px;
+}
+
+ .menu-item:hover {
+  background: #581F82;
+}
+
+.label {
+  white-space: nowrap;   
+  cursor: pointer; /* 🔥 manito */
+  font-family: "Inter", sans-serif;
+  font-weight: 500; /* Medium */
+  font-size: 13px;
+  color: #FFFFFF;
+}
+
+.icon {
+  /* width: 40px;               */
+  display: flex;
+  justify-content: center;  
+}
+
+.icon img {
+  width: 14px;
+  height: 14px;
+}
+
+.sub-menu {
+  display: none;
+  flex-direction: column;
+  margin-left: 38px; 
+  margin-top: -1px;
+}
+
+.menu-item:hover .sub-menu {
+  display: flex;
+} 
+
+ .sub-menu-item {
+  padding: 2px 10px;
+  cursor: pointer;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+
+
+/* NEW */
+/* .sub-menu-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+} */
+.sub-menu-item {
+  position: relative;
+  padding-left: 16px;
+
+  font-family: "Inter", sans-serif;
+  font-weight: 300; /* Regular */
+  font-size: 12px;
+  color: #FFFFFF;
+}
+
+.sub-icon {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  visibility: hidden;
+}
+.sub-menu-item:hover .sub-icon {
+  visibility: visible;
+}
+
+.sub-menu-item:hover {
+  background: #581F82;
+  font-weight: bold;
+}
+
+/* SIDEBAR */
+.sidebar {
+  width: 30px;
+  background: #662D91; 
+  /* color: white; */
+  height: 100%;
+  position: relative;
+  flex-shrink: 0;
+}
+
+/* SIDEBAR INTERNA */
+
+.sidebar-top {
+    margin-top: 12px;
+}
+
+/* NEW */
+.sidebar-inner {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 100%;
+  background:#662D91;
+  color: white;
+  overflow: hidden;
+  transition: width 0.3s ease;
+  z-index: 10;
+}
+
+/* EXPANSIÓN */
+.sidebar-inner.expanded {
+  width: 200px;
+}
+
+/* OCULTAR LABEL CUANDO ESTÁ COLAPSADO */
+.sidebar-inner:not(.expanded) .label {
+  display: none;
+}
+
+/* * {
+  outline: 1px solid red;
+} */
+
+/* body {
+  overflow: hidden;
+} */
+
+.sidebar-bottom {
+  margin-bottom: 50px;
+  margin-top: auto;
+}
+
+
+.search-input-wrapper {
+  position: relative;
+
+  margin-left: 8px;
+  margin-top: 16px;
+}
+
+
+.search-input {
+  width: 140px;
+  height: 28px;
+
+  background: #5B2386;
+  border: none;
+  border-radius: 4px;
+
+  padding-left: 12px;
+  padding-right: 30px;
+
+  color: white;
+
+  font-family: "Inter", sans-serif;
+  font-size: 13px;
+  font-style: italic;
+  font-weight: 200;
+
+  outline: none;
+}
+
+.search-input::placeholder {
+  color: white;
+}
+
+.search-input-icon {
+  position: absolute;
+
+  right: 20px;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  font-size: 14px;
+  color: white;
+
+  pointer-events: none;
+}

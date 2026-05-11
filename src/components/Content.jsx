@@ -1,19 +1,25 @@
-//import { useState } from "react";
-// import { useEffect } from "react";
-import "./Content.css";
 
-function Content({ pantalla,addMsgMonitor }) {
+import fondoLogo from "./styles/res/fondo-logo.png";
 
-  // useEffect(() => {
-  //   addMsgMonitor("Inicio Content");
-  // }, []);
-  // console.log("Hola");
+import "./styles/Content.css";
+
+function Content() {
+
 
   return (
-    <div className="content">
-      {pantalla === "sub1" && <h1>sub1 456 Pantalla principal</h1>}
-      {pantalla === "sub3" && <h1>sub3 Manola, Hola mundo 👋</h1>}
+ 
+ 
+    <div
+      className="content"
+      style={{
+        backgroundImage: `url(${fondoLogo})`
+      }}
+    >
     </div>
+
+
+
+
   );
 }
 
