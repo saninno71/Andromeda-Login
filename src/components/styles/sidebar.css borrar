@@ -77,3 +77,22 @@
   white-space: nowrap;
 }
 
+.sidebar-scroll {
+  /* height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  scrollbar-width: none;      
+  -ms-overflow-style: none;    */
+  border: 3px solid red !important;
+    outline: 5px solid red !important;
+  background: lime !important;
+}
+
+.sidebar-scroll::-webkit-scrollbar {
+  /* width: 0;
+  height: 0; */
+
+  border: 3px solid red !important;
+  background: rgba(255, 0, 0, 0.15) !important;
+}

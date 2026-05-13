@@ -11,10 +11,10 @@ function Content() {
  
     <div
       className="content"
-      style={{
-        backgroundImage: `url(${fondoLogo})`
-      }}
+      
+      // style={{backgroundImage: `url(${fondoLogo})`}}
     >
+      <img className="fondo-logo" src={fondoLogo} />
     </div>
 
 
