@@ -54,14 +54,25 @@ const stopSidebarAutoScroll = () => {
   }
 };
 
+function handleSidebarMouseLeave(e) {
+  const rect = e.currentTarget.getBoundingClientRect();
+
+  console.log("deteccion de salida");
+
+  if (e.clientX >= rect.right) {
+    console.log("deteccion IZQ");
+    setSidebarOpen(false);
+  }
+};
+
 return (
 <aside
   className="sidebar"
   onMouseEnter={() => {
     setSidebarOpen(true);
   }}
-  onMouseLeave={() => {
-    setSidebarOpen(false);
+  onMouseLeave={(e) => {
+    handleSidebarMouseLeave(e);
     stopSidebarAutoScroll();
   }}
   onClick={() => { 
