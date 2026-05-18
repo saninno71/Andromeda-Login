@@ -2,7 +2,7 @@ import { useState,useRef  } from "react";
 import menuData  from "./simul/menu.json";
 import "./styles/Sidebar2.css";
 
-function Sidebar({ sidebarOpen,setSidebarOpen}) {
+function Sidebar({ sidebarOpen,setSidebarOpen, onSelectPage }) {
 
 
 const scrollRef = useRef(null);
@@ -57,10 +57,10 @@ const stopSidebarAutoScroll = () => {
 function handleSidebarMouseLeave(e) {
   const rect = e.currentTarget.getBoundingClientRect();
 
-  console.log("deteccion de salida");
+  // console.log("deteccion de salida");
 
   if (e.clientX >= rect.right) {
-    console.log("deteccion IZQ");
+    // console.log("deteccion IZQ");
     setSidebarOpen(false);
   }
 };
@@ -82,13 +82,6 @@ return (
 
   <div className={`sidebar-inner ${sidebarOpen ? "expanded" : ""}`}>
 
-    {/* <div
-      ref={scrollRef}
-      className="sidebar-scroll"
-      onMouseMove={handleSidebarMouseMove}
-      onMouseLeave={stopSidebarAutoScroll}
-    > */}
-
     <div
       ref={scrollRef}
       className="sidebar-scroll"
@@ -103,7 +96,7 @@ return (
             {/* INICIO Menu Items Auto desde Jscon */}
             {menuData.map((item, index) => (
 
-            <div className="menu-item" key={item.id} tabIndex={0}>
+            <div className="menu-item" key={item.id}>  
 
               <div className="menu-main">
                 <span className="icon">
@@ -123,6 +116,10 @@ return (
                   <div
                     className="sub-menu-item"
                     key={subItem.id}
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      onSelectPage(subItem.route);
+                    }}
                   >
                     <span className="sub-icon">▸</span>
                     <span>{subItem.label}</span>
